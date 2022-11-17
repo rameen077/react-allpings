@@ -6,7 +6,7 @@ import mapboxgl from "mapbox-gl";
 mapboxgl.accessToken = 'pk.eyJ1Ijoiam9objM3OSIsImEiOiJjbGFnbGRlZ2owMThjM3FtcHl1cW83NHU5In0.ftXft95B3h_Dq4UcLa20Vw';
 
 const App = () => {
-  const mapContainerRef = useRef(null);
+  const mapContainerRef = useRef("map-container");
   const popUpRef = useRef(new mapboxgl.Popup({ offset: 15 }));
 
   // initialize map when component mounts
@@ -15,8 +15,8 @@ const App = () => {
       container: mapContainerRef.current,
       // See style options here: https://docs.mapbox.com/api/maps/#styles
       style: "mapbox://styles/mapbox/dark-v10",
-      center: [-104.9876, 39.7405],
-      zoom: 9.5
+      center: [30.9876, 39.7405],
+      zoom: 3.8
     });
 
     // add navigation control (zoom buttons)
